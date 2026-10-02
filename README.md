@@ -104,7 +104,7 @@ docker run --rm -p 8080:8080 catalog-service
 | Сервис | Владеет данными (источник правды) | Хранит проекцию чужих данных | Хранилище |
 |---|---|---|---|
 | User | Аккаунты, хэши паролей, профили, контакты, роли, refresh-токены | — | User DB (PostgreSQL) |
-| Catalog | Товары, категории, цены, остатки, `seller_id` товара | — | Catalog DB (PostgreSQL) |
+| Catalog | Товары, категории, цены, остатки, `seller_id` товара, фото товаров | — | Catalog DB (PostgreSQL) + Media Storage (S3) |
 | Feed | Профили интересов, готовые ленты, счётчики популярности | Карточки товаров (из `Product*` событий) | Feed Store (Redis) |
 | Order | Корзины, заказы, позиции **со снапшотом цены**, статусы, outbox | — (цену фиксирует в момент заказа) | Order DB (PostgreSQL) |
 | Payment | Платежи, возвраты, журнал транзакций (append-only), idempotency-ключи | Сумма и id заказа (из `OrderCreated`) | Payment DB (PostgreSQL) |
