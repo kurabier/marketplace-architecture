@@ -1,0 +1,77 @@
+@startuml c4-container
+' C4 Level 2 — Container diagram маркетплейса.
+' Рендер: любой PlantUML >= 1.2021 (C4-PlantUML входит в стандартную библиотеку),
+' например плагин PlantUML в IDE или https://www.plantuml.com/plantuml
+!include <C4/C4_Container>
+
+LAYOUT_TOP_DOWN()
+HIDE_STEREOTYPE()
+
+title Маркетплейс — C4 Container diagram
+
+Person(buyer, "Покупатель", "Смотрит ленту, оформляет и оплачивает заказы")
+Person(seller, "Продавец", "Управляет своими товарами, следит за заказами")
+
+System_Ext(psp, "Платёжный провайдер", "Эквайринг: приём оплат, возвраты, webhooks")
+System_Ext(msg, "Email / SMS / Push провайдеры", "Доставка уведомлений")
+
+System_Boundary(mp, "Маркетплейс") {
+    Container(client, "Web / Mobile клиент", "SPA, iOS/Android", "UI для покупателей и продавцов")
+    Container(gw, "API Gateway", "Envoy / Nginx", "Единая точка входа: TLS, проверка JWT, роутинг, rate limiting")
+
+    Container(users, "User Service", "Go", "Регистрация, аутентификация, профили, роли buyer/seller; выпуск JWT")
+    ContainerDb(usersDb, "User DB", "PostgreSQL", "Аккаунты, профили, контакты, роли, refresh-токены")
+
+    Container(catalog, "Catalog Service", "Go", "Товары, категории, цены, остатки; CRUD для продавцов")
+    ContainerDb(catalogDb, "Catalog DB", "PostgreSQL", "Товары, категории, цены, остатки, ссылки на медиа")
+    ContainerDb(media, "Media Storage", "S3-совместимое", "Фото товаров")
+
+    Container(feed, "Feed Service", "Go", "Персонализированная лента: профиль интересов + популярное")
+    ContainerDb(feedDb, "Feed Store", "Redis", "Готовые ленты, профили интересов, проекция карточек товаров")
+
+    Container(orders, "Order Service", "Go", "Корзина, оформление заказа, статусная машина заказа (сага)")
+    ContainerDb(ordersDb, "Order DB", "PostgreSQL", "Корзины, заказы, позиции со снапшотом цены, outbox")
+
+    Container(payments, "Payment Service", "Go", "Расчёт сумм, платежи, возвраты, учёт транзакций")
+    ContainerDb(paymentsDb, "Payment DB", "PostgreSQL", "Платежи, возвраты, журнал транзакций (append-only)")
+
+    Container(notify, "Notification Service", "Go", "Уведомления о статусах заказов по каналам")
+    ContainerDb(notifyDb, "Notification DB", "PostgreSQL", "Шаблоны, настройки каналов, проекция контактов, история")
+
+    ContainerQueue(kafka, "Message Broker", "Apache Kafka", "Доменные события между сервисами")
+}
+
+Rel(buyer, client, "Использует", "HTTPS")
+Rel(seller, client, "Использует", "HTTPS")
+Rel(client, gw, "API-запросы", "HTTPS / REST")
+
+Rel(gw, users, "Логин, профиль", "REST, sync")
+Rel(gw, catalog, "Каталог, CRUD товаров", "REST, sync")
+Rel(gw, feed, "Лента, события просмотров", "REST, sync")
+Rel(gw, orders, "Корзина, заказы", "REST, sync")
+
+Rel(orders, catalog, "Цены и наличие на момент заказа", "gRPC, sync")
+Rel(payments, psp, "Создание платежа / возврата", "HTTPS, sync")
+Rel(psp, payments, "Статус платежа", "Webhook")
+Rel(notify, msg, "Отправка", "HTTPS")
+
+Rel(users, usersDb, "R/W", "SQL")
+Rel(catalog, catalogDb, "R/W", "SQL")
+Rel(catalog, media, "R/W", "S3 API")
+Rel(feed, feedDb, "R/W", "RESP")
+Rel(orders, ordersDb, "R/W", "SQL")
+Rel(payments, paymentsDb, "R/W", "SQL")
+Rel(notify, notifyDb, "R/W", "SQL")
+
+Rel(users, kafka, "UserRegistered, UserUpdated", "async")
+Rel(catalog, kafka, "ProductPublished, ProductUpdated, ProductRemoved", "async")
+Rel(feed, kafka, "ProductViewed (активность)", "async")
+Rel(orders, kafka, "OrderCreated, OrderCancelled, OrderStatusChanged", "async")
+Rel(payments, kafka, "PaymentSucceeded, PaymentFailed, Refunded", "async")
+
+Rel(kafka, feed, "Product*, OrderCreated, ProductViewed", "async")
+Rel(kafka, orders, "Payment*", "async")
+Rel(kafka, payments, "OrderCreated, OrderCancelled", "async")
+Rel(kafka, notify, "OrderStatusChanged, User*", "async")
+
+@enduml
