@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1817px" preserveAspectRatio="none" style="width:1651px;height:1817px;background:#FFFFFF;" version="1.1" viewBox="0 0 1651 1817" width="1651px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.9395" id="_title" style="stroke:none;stroke-width:1.0;" width="275" x="681.25" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="265" x="686.25" y="23.5625">Маркетплейс — C4 Container diagram</text><!--MD5=[da046a0f2622aab873424263b4756195]
+cluster mp--><g id="cluster_mp"><rect fill="none" height="1535" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="1192" x="7" y="276.9395"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="110" x="548" y="294.4395">Маркетплейс</text><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="54" x="576" y="309.9238">[System]</text></g><!--MD5=[4a65e84059005d12693a083370a06717]
+entity client--><g id="elem_client"><rect fill="#438DD5" height="104.6973" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="185" x="200.5" y="328.9395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="165" x="210.5" y="354.4395">Web / Mobile клиент</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="106" x="240" y="369.9238">[SPA, iOS/Android]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="291" y="386.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="220" y="403.3203">UI для покупателей и</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="256" y="420.2598">продавцов</text></g><!--MD5=[5f97cdfbafef6a5cbddfbf6bdd3803d1]
+entity gw--><g id="elem_gw"><rect fill="#438DD5" height="121.6367" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="217" x="184.5" y="524.9395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="101" x="242.5" y="550.4395">API Gateway</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="250" y="565.9238">[Envoy / Nginx]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="291" y="582.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="205.5" y="599.3203">Единая точка входа: TLS,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="197" x="194.5" y="616.2598">проверка JWT, роутинг, rate</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="270" y="633.1992">limiting</text></g><!--MD5=[5f2f9dbbee692058d60489180693f774]
+entity users--><g id="elem_users"><rect fill="#438DD5" height="138.5762" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="207" x="447.5" y="737.9395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="102" x="500" y="763.4395">User Service</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="24" x="539" y="778.9238">[Go]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="549" y="795.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="505.5" y="812.3203">Регистрация,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="457.5" y="829.2598">аутентификация, профили,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="172" x="463" y="846.1992">роли buyer/seller; выпуск</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="535.5" y="863.1387">JWT</text></g><!--MD5=[8414ad232b1ee588435d5fe2154526cf]
+entity usersDb--><g id="elem_usersDb"><path d="M692,991.9395 C692,981.9395 775,981.9395 775,981.9395 C775,981.9395 858,981.9395 858,991.9395 L858,1102.5762 C858,1112.5762 775,1112.5762 775,1112.5762 C775,1112.5762 692,1112.5762 692,1102.5762 L692,991.9395 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M692,991.9395 C692,1001.9395 775,1001.9395 775,1001.9395 C775,1001.9395 858,1001.9395 858,991.9395 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="65" x="742.5" y="1021.4395">User DB</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="737" y="1036.9238">[PostgreSQL]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="773" y="1053.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="706" y="1070.3203">Аккаунты, профили,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="718.5" y="1087.2598">контакты, роли,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="724.5" y="1104.1992">refresh-токены</text></g><!--MD5=[c9cea0ee923861e4bd87e30fcc0aab3d]
+entity catalog--><g id="elem_catalog"><rect fill="#438DD5" height="121.6367" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="204" x="269" y="1464.4395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="124" x="309" y="1489.9395">Catalog Service</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="24" x="359" y="1505.4238">[Go]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="369" y="1521.8809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="283" y="1538.8203">Товары, категории, цены,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="304" y="1555.7598">остатки; CRUD для</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="334" y="1572.6992">продавцов</text></g><!--MD5=[48d7746b5175e1e37fe36caf37719bf7]
+entity catalogDb--><g id="elem_catalogDb"><path d="M183,1691.9395 C183,1681.9395 285,1681.9395 285,1681.9395 C285,1681.9395 387,1681.9395 387,1691.9395 L387,1785.6367 C387,1795.6367 285,1795.6367 285,1795.6367 C285,1795.6367 183,1795.6367 183,1785.6367 L183,1691.9395 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M183,1691.9395 C183,1701.9395 285,1701.9395 285,1701.9395 C285,1701.9395 387,1701.9395 387,1691.9395 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="87" x="241.5" y="1721.4395">Catalog DB</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="247" y="1736.9238">[PostgreSQL]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="283" y="1753.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="197" y="1770.3203">Товары, категории, цены,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="180" x="195" y="1787.2598">остатки, ссылки на медиа</text></g><!--MD5=[ea6c3d58b1786cd6b1e427681fea660b]
+entity media--><g id="elem_media"><path d="M422,1700.4395 C422,1690.4395 489,1690.4395 489,1690.4395 C489,1690.4395 556,1690.4395 556,1700.4395 L556,1777.1973 C556,1787.1973 489,1787.1973 489,1787.1973 C489,1787.1973 422,1787.1973 422,1777.1973 L422,1700.4395 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M422,1700.4395 C422,1710.4395 489,1710.4395 489,1710.4395 C489,1710.4395 556,1710.4395 556,1700.4395 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="114" x="432" y="1729.9395">Media Storage</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="109" x="434.5" y="1745.4238">[S3-совместимое]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="487" y="1761.8809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="443.5" y="1778.8203">Фото товаров</text></g><!--MD5=[b2c0620998ca1ff1f005bf8c533dac72]
+entity feed--><g id="elem_feed"><rect fill="#438DD5" height="121.6367" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="219" x="23.5" y="1232.9395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="103" x="81.5" y="1258.4395">Feed Service</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="24" x="121" y="1273.9238">[Go]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="131" y="1290.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155" x="55.5" y="1307.3203">Персонализированная</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="33.5" y="1324.2598">лента: профиль интересов +</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="92.5" y="1341.1992">популярное</text></g><!--MD5=[bcd3dc829c6325874207dca1b64b219b]
+entity feedDb--><g id="elem_feedDb"><path d="M34.5,1469.9395 C34.5,1459.9395 133,1459.9395 133,1459.9395 C133,1459.9395 231.5,1459.9395 231.5,1469.9395 L231.5,1580.5762 C231.5,1590.5762 133,1590.5762 133,1590.5762 C133,1590.5762 34.5,1590.5762 34.5,1580.5762 L34.5,1469.9395 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M34.5,1469.9395 C34.5,1479.9395 133,1479.9395 133,1479.9395 C133,1479.9395 231.5,1479.9395 231.5,1469.9395 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="86" x="90" y="1499.4395">Feed Store</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="113.5" y="1514.9238">[Redis]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="131" y="1531.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="48.5" y="1548.3203">Готовые ленты, профили</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="58.5" y="1565.2598">интересов, проекция</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="71" y="1582.1992">карточек товаров</text></g><!--MD5=[1f8d078c60165442005a4c1581b11ffa]
+entity orders--><g id="elem_orders"><rect fill="#438DD5" height="121.6367" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="207" x="315.5" y="1232.9395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="110" x="364" y="1258.4395">Order Service</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="24" x="407" y="1273.9238">[Go]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="417" y="1290.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="343.5" y="1307.3203">Корзина, оформление</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="325.5" y="1324.2598">заказа, статусная машина</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="374" y="1341.1992">заказа (сага)</text></g><!--MD5=[1c3088a2dd9a9ab5ca123ee87be2ef50]
+entity ordersDb--><g id="elem_ordersDb"><path d="M508,1478.4395 C508,1468.4395 613,1468.4395 613,1468.4395 C613,1468.4395 718,1468.4395 718,1478.4395 L718,1572.1367 C718,1582.1367 613,1582.1367 613,1582.1367 C613,1582.1367 508,1582.1367 508,1572.1367 L508,1478.4395 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M508,1478.4395 C508,1488.4395 613,1488.4395 613,1488.4395 C613,1488.4395 718,1488.4395 718,1478.4395 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="73" x="576.5" y="1507.9395">Order DB</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="575" y="1523.4238">[PostgreSQL]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="611" y="1539.8809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="524" y="1556.8203">Корзины, заказы, позиции</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190" x="518" y="1573.7598">со снапшотом цены, outbox</text></g><!--MD5=[4dde6ce8e1837102426122833e5c6be1]
+entity payments--><g id="elem_payments"><rect fill="#438DD5" height="104.6973" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="207" x="975.5" y="1241.4395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="134" x="1012" y="1266.9395">Payment Service</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="24" x="1067" y="1282.4238">[Go]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1077" y="1298.8809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="999" y="1315.8203">Расчёт сумм, платежи,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="985.5" y="1332.7598">возвраты, учёт транзакций</text></g><!--MD5=[fc6544b84b4aa8d66c4661d1ce4a8929]
+entity paymentsDb--><g id="elem_paymentsDb"><path d="M962.5,1478.4395 C962.5,1468.4395 1071,1468.4395 1071,1468.4395 C1071,1468.4395 1179.5,1468.4395 1179.5,1478.4395 L1179.5,1572.1367 C1179.5,1582.1367 1071,1582.1367 1071,1582.1367 C1071,1582.1367 962.5,1582.1367 962.5,1572.1367 L962.5,1478.4395 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M962.5,1478.4395 C962.5,1488.4395 1071,1488.4395 1071,1488.4395 C1071,1488.4395 1179.5,1488.4395 1179.5,1478.4395 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="97" x="1022.5" y="1507.9395">Payment DB</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="1033" y="1523.4238">[PostgreSQL]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1069" y="1539.8809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="193" x="976.5" y="1556.8203">Платежи, возвраты, журнал</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="177" x="982.5" y="1573.7598">транзакций (append-only)</text></g><!--MD5=[5a055a6222b7af8727bdc2f9245e88a6]
+entity notify--><g id="elem_notify"><rect fill="#438DD5" height="104.6973" rx="2.5" ry="2.5" style="stroke:#3C7FC0;stroke-width:0.5;" width="199" x="741.5" y="1241.4395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="154" x="764" y="1266.9395">Notification Service</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="24" x="829" y="1282.4238">[Go]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="839" y="1298.8809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171" x="755.5" y="1315.8203">Уведомления о статусах</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="772.5" y="1332.7598">заказов по каналам</text></g><!--MD5=[403b75a6ce5814b808b113c22fa370bb]
+entity notifyDb--><g id="elem_notifyDb"><path d="M755.5,1469.9395 C755.5,1459.9395 841,1459.9395 841,1459.9395 C841,1459.9395 926.5,1459.9395 926.5,1469.9395 L926.5,1580.5762 C926.5,1590.5762 841,1590.5762 841,1590.5762 C841,1590.5762 755.5,1590.5762 755.5,1580.5762 L755.5,1469.9395 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M755.5,1469.9395 C755.5,1479.9395 841,1479.9395 841,1479.9395 C841,1479.9395 926.5,1479.9395 926.5,1469.9395 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="117" x="782.5" y="1499.4395">Notification DB</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="803" y="1514.9238">[PostgreSQL]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="839" y="1531.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="769.5" y="1548.3203">Шаблоны, настройки</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="774.5" y="1565.2598">каналов, проекция</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134" x="774" y="1582.1992">контактов, история</text></g><!--MD5=[e29745d789d1cd237fb5892a53e7b9d1]
+entity kafka--><g id="elem_kafka"><path d="M450,999.9395 L652,999.9395 C657,999.9395 657,1047.2881 657,1047.2881 C657,1047.2881 657,1094.6367 652,1094.6367 L450,1094.6367 C445,1094.6367 445,1047.2881 445,1047.2881 C445,1047.2881 445,999.9395 450,999.9395 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M652,999.9395 C647,999.9395 647,1047.2881 647,1047.2881 C647,1094.6367 652,1094.6367 652,1094.6367 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="130" x="481" y="1020.4395">Message Broker</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="87" x="502.5" y="1035.9238">[Apache Kafka]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="544" y="1052.3809"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184" x="454" y="1069.3203">Доменные события между</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="508" y="1086.2598">сервисами</text></g><!--MD5=[d775e9e69c0aec49f10a9883b4c314c5]
+entity buyer--><g id="elem_buyer"><rect fill="#08427B" height="138.1777" rx="2.5" ry="2.5" style="stroke:#073B6F;stroke-width:0.5;" width="216" x="72" y="53.4395"/><image height="48" width="48" x="156" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="63.4395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="97" x="131.5" y="126.9395">Покупатель</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="178" y="144.3613"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188" x="86" y="161.3008">Смотрит ленту, оформляет</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="108.5" y="178.2402">и оплачивает заказы</text></g><!--MD5=[d78b2c0edfd962821edc1b63ac81f5e9]
+entity seller--><g id="elem_seller"><rect fill="#08427B" height="155.1172" rx="2.5" ry="2.5" style="stroke:#073B6F;stroke-width:0.5;" width="166" x="323" y="44.9395"/><image height="48" width="48" x="382" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="54.9395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="82" x="365" y="118.4395">Продавец</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="404" y="135.8613"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="342" y="152.8008">Управляет своими</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="333" y="169.7402">товарами, следит за</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="373.5" y="186.6797">заказами</text></g><!--MD5=[e2565049cc169615cdc3a78d4ae6bce8]
+entity psp--><g id="elem_psp"><rect fill="#999999" height="90.1777" rx="2.5" ry="2.5" style="stroke:#8A8A8A;stroke-width:0.5;" width="209" x="1436.5" y="1480.4395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="189" x="1446.5" y="1505.9395">Платёжный провайдер</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1539" y="1523.3613"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="172" x="1455" y="1540.3008">Эквайринг: приём оплат,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="1471" y="1557.2402">возвраты, webhooks</text></g><!--MD5=[17aeb1e8b66d9b8c8203da36818275cd]
+entity msg--><g id="elem_msg"><rect fill="#999999" height="92.5977" rx="2.5" ry="2.5" style="stroke:#8A8A8A;stroke-width:0.5;" width="186" x="1215" y="1478.9395"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="144" x="1234" y="1504.4395">Email / SMS / Push</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="102" x="1257" y="1523.7988">провайдеры</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1306" y="1541.2207"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162" x="1229" y="1558.1602">Доставка уведомлений</text></g><!--MD5=[cd505275a12dcf526ee7754b414d6253]
+link buyer to client--><g id="link_buyer_client"><path d="M209.99,191.6395 C227.7,231.9295 249.91,282.4495 266.9,321.0895 " fill="none" id="buyer-to-client" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="270.23,328.6495,269.7641,320.1182,264.2693,322.5281,270.23,328.6495" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="70" x="240" y="242.5645">Использует</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="49" x="250.5" y="257.084">[HTTPS]</text></g><!--MD5=[95b1ae1d56167c57053420f274c60c04]
+link seller to client--><g id="link_seller_client"><path d="M372.25,200.1995 C355.19,238.9995 334.81,285.3595 318.98,321.3495 " fill="none" id="seller-to-client" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="315.68,328.8595,321.6451,322.7424,316.1521,320.3285,315.68,328.8595" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="70" x="357" y="242.5645">Использует</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="49" x="367.5" y="257.084">[HTTPS]</text></g><!--MD5=[c356f4863903470fc855fbc76891db95]
+link client to gw--><g id="link_client_gw"><path d="M293,434.0595 C293,459.1195 293,489.5795 293,516.5395 " fill="none" id="client-to-gw" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="293,524.7895,296,516.7895,290,516.7895,293,524.7895" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="78" x="300" y="476.5645">API-запросы</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="90" x="294" y="491.084">[HTTPS / REST]</text></g><!--MD5=[663c36c0e02105b4bd7a6a2c597cd5eb]
+link gw to users--><g id="link_gw_users"><path d="M363.84,647.2095 C394.75,673.4995 431.29,704.5895 463.84,732.2895 " fill="none" id="gw-to-users" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="470.3,737.7795,466.1479,730.3122,462.2617,734.8835,470.3,737.7795" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="94" x="430" y="689.5645">Логин, профиль</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="441" y="704.084">[REST, sync]</text></g><!--MD5=[bb1a21131ae2e3ffc417300c74975ebf]
+link gw to catalog--><g id="link_gw_catalog"><path d="M274.85,647.1195 C252.71,723.9395 216.56,861.3695 203,981.9395 C196.49,1039.7995 172.23,1063.5095 203,1112.9395 C218.97,1138.5895 246.05,1118.6395 264,1142.9395 C264.89,1144.1395 297.58,1353.5095 298,1354.9395 C308.02,1389.3995 323.24,1426.1495 337.2,1456.5995 " fill="none" id="gw-to-catalog" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="340.72,1464.1995,340.084,1455.6792,334.6384,1458.1983,340.72,1464.1995" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="142" x="204" y="1044.5645">Каталог, CRUD товаров</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="239" y="1059.084">[REST, sync]</text></g><!--MD5=[764fa43ec64d102d78cdaaf0fcaf59f3]
+link gw to feed--><g id="link_gw_feed"><path d="M219.47,647.0295 C210.22,656.4495 201.42,666.5395 194,676.9395 C129.36,767.5295 118.62,798.1795 95,906.9395 C67.08,1035.5195 60.92,1074.6195 90,1202.9395 C91.66,1210.2595 93.99,1217.6795 96.71,1224.9495 " fill="none" id="gw-to-feed" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="99.81,1232.7795,99.6583,1224.2368,94.0786,1226.443,99.81,1232.7795" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="94" x="96" y="919.5645">Лента, события</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="74" x="107.5" y="934.084">просмотров</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="108.5" y="948.6035">[REST, sync]</text></g><!--MD5=[07528397a1ae051ca8dd67161037cb0a]
+link gw to orders--><g id="link_gw_orders"><path d="M305.45,647.1595 C320.7,724.3195 345.67,862.3895 355,981.9395 C359.53,1039.9895 387.53,1064.6495 355,1112.9395 C335.17,1142.3695 300.83,1113.5095 281,1142.9395 C273.55,1153.9995 274.65,1191.2195 281,1202.9395 C288.01,1215.8795 297.78,1227.2595 308.92,1237.1795 " fill="none" id="gw-to-orders" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="315.24,1242.5395,311.0778,1235.0778,307.1978,1239.6545,315.24,1242.5395" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="101" x="353" y="926.5645">Корзина, заказы</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="367.5" y="941.084">[REST, sync]</text></g><!--MD5=[e1fecd123a1f3542a637a92d2b77f189]
+link orders to catalog--><g id="link_orders_catalog"><path d="M389.64,1354.9595 C385.81,1364.7895 382.4,1375.0095 380,1384.9395 C374.48,1407.8395 371.85,1433.4295 370.71,1456.3695 " fill="none" id="orders-to-catalog" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="370.37,1464.3695,373.6963,1456.4995,367.7014,1456.2529,370.37,1464.3695" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="112" x="381" y="1397.5645">Цены и наличие на</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="90" x="393.5" y="1412.084">момент заказа</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="402" y="1426.6035">[gRPC, sync]</text></g><!--MD5=[8b41b3bd24a02733da02af021edbf7bc]
+link payments to psp--><g id="link_payments_psp"><path d="M1182.62,1316.8395 C1232.43,1330.7695 1291.11,1352.4695 1337,1384.9395 C1357.91,1399.7395 1353.48,1413.3595 1373,1429.9395 C1386.4,1441.3195 1417.09,1459.2695 1448.63,1476.4895 " fill="none" id="payments-to-psp" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1455.79,1480.3795,1450.1997,1473.9181,1447.3296,1479.1871,1455.79,1480.3795" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="120" x="1374" y="1397.5645">Создание платежа /</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="55" x="1408" y="1412.084">возврата</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="82" x="1394.5" y="1426.6035">[HTTPS, sync]</text></g><!--MD5=[1bec1cc21c9e3a66a034c7a407608e76]
+link psp to payments--><g id="link_psp_payments"><path d="M1540.14,1480.2995 C1537.12,1449.3495 1527.94,1409.2995 1502,1384.9395 C1457.75,1343.3895 1300.63,1318.4195 1190.88,1305.6595 " fill="none" id="psp-to-payments" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1182.74,1304.7295,1190.3445,1308.6246,1191.0306,1302.664,1182.74,1304.7295" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="96" x="1529" y="1404.5645">Статус платежа</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="62" x="1546" y="1419.084">[Webhook]</text></g><!--MD5=[9e779190d14155a4c9b12df4f2bb6041]
+link notify to msg--><g id="link_notify_msg"><path d="M936.12,1346.5095 C943.42,1349.5995 950.77,1352.4595 958,1354.9395 C1026.03,1378.2495 1051.01,1356.3595 1117,1384.9395 C1167.05,1406.6095 1216.57,1443.3495 1252.65,1473.6795 " fill="none" id="notify-to-msg" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1258.77,1478.8695,1254.6179,1471.4022,1250.7317,1475.9735,1258.77,1478.8695" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="58" x="1196" y="1404.5645">Отправка</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="49" x="1200.5" y="1419.084">[HTTPS]</text></g><!--MD5=[85e1802e2498b4b23e8aef8fc6337745]
+link users to usersDb--><g id="link_users_usersDb"><path d="M629.72,877.0395 C640.13,886.8395 650.48,896.9795 660,906.9395 C680.51,928.4095 701.57,953.0595 719.97,975.6095 " fill="none" id="users-to-usersDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="725.09,981.9095,722.3785,973.8071,717.7195,977.5879,725.09,981.9095" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="25" x="703.5" y="926.5645">R/W</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="32" x="700" y="941.084">[SQL]</text></g><!--MD5=[0e68b66b2be67ee22a26b10dd0a43278]
+link catalog to catalogDb--><g id="link_catalog_catalogDb"><path d="M346.59,1586.4795 C335.47,1613.8295 322.29,1646.2295 310.99,1674.0295 " fill="none" id="catalog-to-catalogDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="307.85,1681.7395,313.642,1675.4583,308.0838,1673.1986,307.85,1681.7395" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="25" x="334.5" y="1633.5645">R/W</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="32" x="331" y="1648.084">[SQL]</text></g><!--MD5=[a8313acd4f103b89c4e8f10166b6d60d]
+link catalog to media--><g id="link_catalog_media"><path d="M404.5,1586.4795 C421.4,1616.7695 441.75,1653.2495 458.24,1682.8095 " fill="none" id="catalog-to-media" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="462.35,1690.1695,461.0697,1681.7219,455.8309,1684.6467,462.35,1690.1695" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="25" x="451" y="1633.5645">R/W</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="45" x="441" y="1648.084">[S3 API]</text></g><!--MD5=[f7469066d50ed1232698f0c1c80b4859]
+link feed to feedDb--><g id="link_feed_feedDb"><path d="M133,1355.2395 C133,1384.7395 133,1420.4995 133,1451.5195 " fill="none" id="feed-to-feedDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="133,1459.7195,136,1451.7195,130,1451.7195,133,1459.7195" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="25" x="141" y="1404.5645">R/W</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="134" y="1419.084">[RESP]</text></g><!--MD5=[e93543f376d2da98fc254b5eaa756d48]
+link orders to ordersDb--><g id="link_orders_ordersDb"><path d="M474.66,1354.9895 C483.57,1364.8995 492.62,1375.1395 501,1384.9395 C522.13,1409.6395 544.7,1437.4495 564,1461.7095 " fill="none" id="orders-to-ordersDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="569.1,1468.1295,566.4723,1459.9996,561.7745,1463.732,569.1,1468.1295" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="25" x="539.5" y="1404.5645">R/W</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="32" x="536" y="1419.084">[SQL]</text></g><!--MD5=[e2b8593fff696d77d45bdaf5480d2203]
+link payments to paymentsDb--><g id="link_payments_paymentsDb"><path d="M1077.2,1346.4395 C1076.03,1380.1095 1074.49,1424.3395 1073.24,1460.2795 " fill="none" id="payments-to-paymentsDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1072.96,1468.2895,1076.2441,1460.4018,1070.248,1460.1873,1072.96,1468.2895" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="25" x="1079.5" y="1404.5645">R/W</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="32" x="1076" y="1419.084">[SQL]</text></g><!--MD5=[f436384097399effdf8ab937ffa4cd88]
+link notify to notifyDb--><g id="link_notify_notifyDb"><path d="M841,1346.4395 C841,1377.3995 841,1417.2795 841,1451.4495 " fill="none" id="notify-to-notifyDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="841,1459.5495,844,1451.5495,838,1451.5495,841,1459.5495" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="25" x="845.5" y="1404.5645">R/W</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="32" x="842" y="1419.084">[SQL]</text></g><!--MD5=[7e5c25bc53d44be04b52c2fd16823bee]
+link users to kafka--><g id="link_users_kafka"><path d="M551,876.9595 C551,913.4495 551,957.7095 551,991.8395 " fill="none" id="users-to-kafka" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="551,999.8495,554,991.8495,548,991.8495,551,999.8495" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="96" x="552" y="919.5645">UserRegistered,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="79" x="562" y="934.084">UserUpdated</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="580.5" y="948.6035">[async]</text></g><!--MD5=[6d81e9ebd1fdc6df26323c4c63e2fcb4]
+link catalog to kafka--><g id="link_catalog_kafka"><path d="M473.24,1468.1095 C479.21,1465.2595 485.15,1462.5095 491,1459.9395 C528.05,1443.6395 550.83,1460.8195 577,1429.9395 C634.44,1362.1595 558.75,1304.8095 611,1232.9395 C627.83,1209.7795 653.2,1227.4495 668,1202.9395 C681.78,1180.1095 679.5,1166.9995 668,1142.9395 C660.34,1126.8995 648.48,1112.7095 635.19,1100.5195 " fill="none" id="catalog-to-kafka" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="629,1095.0595,633.0198,1102.5988,636.986,1098.0966,629,1095.0595" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="108" x="612" y="1276.5645">ProductPublished,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="101" x="615.5" y="1291.084">ProductUpdated,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="101" x="617" y="1305.6035">ProductRemoved</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="646.5" y="1320.123">[async]</text></g><!--MD5=[9212d24f61eebd65c838bf3c4d268873]
+link feed to kafka--><g id="link_feed_kafka"><path d="M233.25,1232.6995 C246.41,1223.3295 259.35,1213.2995 271,1202.9395 C296.94,1179.8695 293.01,1163.4695 321,1142.9395 C355.67,1117.4995 398.18,1097.5495 437.18,1082.6695 " fill="none" id="feed-to-kafka" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="444.93,1079.7695,436.386,1079.7712,438.4939,1085.3888,444.93,1079.7695" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="90" x="322" y="1163.0645">ProductViewed</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="78" x="329.5" y="1177.584">(активность)</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="347.5" y="1192.1035">[async]</text></g><!--MD5=[d1aa7b2569ca130657bef3bfc5b0b52b]
+link kafka to feed--><g id="link_kafka_feed"><path d="M444.99,1087.4895 C416.11,1096.9795 384.62,1106.2995 355,1112.9395 C302.12,1124.7995 148.88,1102.3295 113,1142.9395 C93.52,1164.9795 94.91,1196.4395 102.63,1224.8595 " fill="none" id="kafka-to-feed" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="104.97,1232.7795,105.5899,1224.258,99.8339,1225.9515,104.97,1232.7795" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="145" x="114" y="1163.0645">Product*, OrderCreated,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="90" x="143" y="1177.584">ProductViewed</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="167" y="1192.1035">[async]</text></g><!--MD5=[0b7d5cc00b81525fc579ae832b60c046]
+link orders to kafka--><g id="link_orders_kafka"><path d="M489.98,1232.8795 C498.27,1223.5195 505.92,1213.4395 512,1202.9395 C529.61,1172.4995 539.35,1134.1795 544.69,1103.3295 " fill="none" id="orders-to-kafka" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="546.02,1095.2495,541.7739,1102.6637,547.696,1103.6275,546.02,1095.2495" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="85" x="553" y="1155.5645">OrderCreated,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="96" x="547.5" y="1170.084">OrderCancelled,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="124" x="535" y="1184.6035">OrderStatusChanged</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="576" y="1199.123">[async]</text></g><!--MD5=[56bc5df5b63c156687c0b8d1fbcf85dc]
+link kafka to orders--><g id="link_kafka_orders"><path d="M484.82,1095.0695 C469.58,1108.8295 454.94,1125.0495 445,1142.9395 C431.27,1167.6495 424.48,1197.8895 421.22,1224.7195 " fill="none" id="kafka-to-orders" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="420.32,1232.9295,424.1746,1225.3043,418.2104,1224.65,420.32,1232.9295" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="51" x="446" y="1170.0645">Payment</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="6" x="497" y="1170.0645">*</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="453.5" y="1184.584">[async]</text></g><!--MD5=[e60a2558f4e9094ac5568279d1551715]
+link payments to kafka--><g id="link_payments_kafka"><path d="M975.44,1241.3995 C969.55,1238.5295 963.7,1235.6895 958,1232.9395 C929.7,1219.2895 917.32,1223.9895 894,1202.9395 C870.92,1182.0995 883.73,1160.4095 858,1142.9395 C789.81,1096.6495 753.21,1138.9495 675,1112.9395 C663.08,1108.9795 650.91,1103.9795 639.09,1098.5295 " fill="none" id="payments-to-kafka" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="631.77,1095.0795,637.7224,1101.2088,640.2849,1095.7835,631.77,1095.0795" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="121" x="908" y="1163.0645">PaymentSucceeded,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="150" x="895" y="1177.584">PaymentFailed, Refunded</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="949" y="1192.1035">[async]</text></g><!--MD5=[8b75b425432b14fa7e07cd95cd105b38]
+link kafka to payments--><g id="link_kafka_payments"><path d="M629.09,1094.9795 C643.91,1102.0895 659.61,1108.5195 675,1112.9395 C755.35,1136.0195 987.69,1087.1995 1050,1142.9395 C1074.77,1165.0995 1082.24,1201.4995 1083.41,1232.8995 " fill="none" id="kafka-to-payments" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1083.58,1241.1795,1086.4079,1233.117,1080.4093,1233.2456,1083.58,1241.1795" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="85" x="1082" y="1163.0645">OrderCreated,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="92" x="1080" y="1177.584">OrderCancelled</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="1105" y="1192.1035">[async]</text></g><!--MD5=[de4b26578abcb82b4a2949305361ab9e]
+link kafka to notify--><g id="link_kafka_notify"><path d="M628.8,1095.1195 C648.47,1109.0295 668.63,1125.3095 685,1142.9395 C706.16,1165.7295 700.17,1179.8495 721,1202.9395 C731.64,1214.7395 744.03,1226.0295 756.72,1236.3795 " fill="none" id="kafka-to-notify" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="762.97,1241.3795,758.593,1234.0417,754.8475,1238.729,762.97,1241.3795" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="128" x="722" y="1163.0645">OrderStatusChanged,</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="28" x="770.5" y="1177.584">User</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="6" x="798.5" y="1177.584">*</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="766.5" y="1192.1035">[async]</text></g><!--MD5=[b21e055742449d2aa795505eb7b5b206]
+@startuml c4-container
+' C4 Level 2 — Container diagram маркетплейса.
+' Рендер: любой PlantUML >= 1.2021 (C4-PlantUML входит в стандартную библиотеку),
+' например плагин PlantUML в IDE или https://www.plantuml.com/plantuml
+!include <C4/C4_Container>
+
+LAYOUT_TOP_DOWN()
+HIDE_STEREOTYPE()
+
+title Маркетплейс — C4 Container diagram
+
+Person(buyer, "Покупатель", "Смотрит ленту, оформляет и оплачивает заказы")
+Person(seller, "Продавец", "Управляет своими товарами, следит за заказами")
+
+System_Ext(psp, "Платёжный провайдер", "Эквайринг: приём оплат, возвраты, webhooks")
+System_Ext(msg, "Email / SMS / Push провайдеры", "Доставка уведомлений")
+
+System_Boundary(mp, "Маркетплейс") {
+    Container(client, "Web / Mobile клиент", "SPA, iOS/Android", "UI для покупателей и продавцов")
+    Container(gw, "API Gateway", "Envoy / Nginx", "Единая точка входа: TLS, проверка JWT, роутинг, rate limiting")
+
+    Container(users, "User Service", "Go", "Регистрация, аутентификация, профили, роли buyer/seller; выпуск JWT")
+    ContainerDb(usersDb, "User DB", "PostgreSQL", "Аккаунты, профили, контакты, роли, refresh-токены")
+
+    Container(catalog, "Catalog Service", "Go", "Товары, категории, цены, остатки; CRUD для продавцов")
+    ContainerDb(catalogDb, "Catalog DB", "PostgreSQL", "Товары, категории, цены, остатки, ссылки на медиа")
+    ContainerDb(media, "Media Storage", "S3-совместимое", "Фото товаров")
+
+    Container(feed, "Feed Service", "Go", "Персонализированная лента: профиль интересов + популярное")
+    ContainerDb(feedDb, "Feed Store", "Redis", "Готовые ленты, профили интересов, проекция карточек товаров")
+
+    Container(orders, "Order Service", "Go", "Корзина, оформление заказа, статусная машина заказа (сага)")
+    ContainerDb(ordersDb, "Order DB", "PostgreSQL", "Корзины, заказы, позиции со снапшотом цены, outbox")
+
+    Container(payments, "Payment Service", "Go", "Расчёт сумм, платежи, возвраты, учёт транзакций")
+    ContainerDb(paymentsDb, "Payment DB", "PostgreSQL", "Платежи, возвраты, журнал транзакций (append-only)")
+
+    Container(notify, "Notification Service", "Go", "Уведомления о статусах заказов по каналам")
+    ContainerDb(notifyDb, "Notification DB", "PostgreSQL", "Шаблоны, настройки каналов, проекция контактов, история")
+
+    ContainerQueue(kafka, "Message Broker", "Apache Kafka", "Доменные события между сервисами")
+}
+
+Rel(buyer, client, "Использует", "HTTPS")
+Rel(seller, client, "Использует", "HTTPS")
+Rel(client, gw, "API-запросы", "HTTPS / REST")
+
+Rel(gw, users, "Логин, профиль", "REST, sync")
+Rel(gw, catalog, "Каталог, CRUD товаров", "REST, sync")
+Rel(gw, feed, "Лента, события просмотров", "REST, sync")
+Rel(gw, orders, "Корзина, заказы", "REST, sync")
+
+Rel(orders, catalog, "Цены и наличие на момент заказа", "gRPC, sync")
+Rel(payments, psp, "Создание платежа / возврата", "HTTPS, sync")
+Rel(psp, payments, "Статус платежа", "Webhook")
+Rel(notify, msg, "Отправка", "HTTPS")
+
+Rel(users, usersDb, "R/W", "SQL")
+Rel(catalog, catalogDb, "R/W", "SQL")
+Rel(catalog, media, "R/W", "S3 API")
+Rel(feed, feedDb, "R/W", "RESP")
+Rel(orders, ordersDb, "R/W", "SQL")
+Rel(payments, paymentsDb, "R/W", "SQL")
+Rel(notify, notifyDb, "R/W", "SQL")
+
+Rel(users, kafka, "UserRegistered, UserUpdated", "async")
+Rel(catalog, kafka, "ProductPublished, ProductUpdated, ProductRemoved", "async")
+Rel(feed, kafka, "ProductViewed (активность)", "async")
+Rel(orders, kafka, "OrderCreated, OrderCancelled, OrderStatusChanged", "async")
+Rel(payments, kafka, "PaymentSucceeded, PaymentFailed, Refunded", "async")
+
+Rel(kafka, feed, "Product*, OrderCreated, ProductViewed", "async")
+Rel(kafka, orders, "Payment*", "async")
+Rel(kafka, payments, "OrderCreated, OrderCancelled", "async")
+Rel(kafka, notify, "OrderStatusChanged, User*", "async")
+
+@enduml
+
+@startuml c4-container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor transparent
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #438DD5
+    FontColor #438DD5
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam person<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam actor<<external_container>> {
+    StereotypeFontColor #B3B3B3
+    FontColor #B3B3B3
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam person<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+top to bottom direction
+hide stereotype
+
+title Маркетплейс — C4 Container diagram
+
+rectangle "<$person>\n==Покупатель\n\n Смотрит ленту, оформляет и оплачивает заказы" <<person>> as buyer 
+rectangle "<$person>\n==Продавец\n\n Управляет своими товарами, следит за заказами" <<person>> as seller 
+
+rectangle "==Платёжный провайдер\n\n Эквайринг: приём оплат, возвраты, webhooks" <<external_system>> as psp 
+rectangle "==Email / SMS / Push провайдеры\n\n Доставка уведомлений" <<external_system>> as msg 
+
+rectangle "==Маркетплейс\n<size:12>[System]</size>" <<boundary>> as mp  {
+    rectangle "==Web / Mobile клиент\n//<size:12>[SPA, iOS/Android]</size>//\n\n UI для покупателей и продавцов" <<container>> as client 
+    rectangle "==API Gateway\n//<size:12>[Envoy / Nginx]</size>//\n\n Единая точка входа: TLS, проверка JWT, роутинг, rate limiting" <<container>> as gw 
+
+    rectangle "==User Service\n//<size:12>[Go]</size>//\n\n Регистрация, аутентификация, профили, роли buyer/seller; выпуск JWT" <<container>> as users 
+    database "==User DB\n//<size:12>[PostgreSQL]</size>//\n\n Аккаунты, профили, контакты, роли, refresh-токены" <<container>> as usersDb 
+
+    rectangle "==Catalog Service\n//<size:12>[Go]</size>//\n\n Товары, категории, цены, остатки; CRUD для продавцов" <<container>> as catalog 
+    database "==Catalog DB\n//<size:12>[PostgreSQL]</size>//\n\n Товары, категории, цены, остатки, ссылки на медиа" <<container>> as catalogDb 
+    database "==Media Storage\n//<size:12>[S3-совместимое]</size>//\n\n Фото товаров" <<container>> as media 
+
+    rectangle "==Feed Service\n//<size:12>[Go]</size>//\n\n Персонализированная лента: профиль интересов + популярное" <<container>> as feed 
+    database "==Feed Store\n//<size:12>[Redis]</size>//\n\n Готовые ленты, профили интересов, проекция карточек товаров" <<container>> as feedDb 
+
+    rectangle "==Order Service\n//<size:12>[Go]</size>//\n\n Корзина, оформление заказа, статусная машина заказа (сага)" <<container>> as orders 
+    database "==Order DB\n//<size:12>[PostgreSQL]</size>//\n\n Корзины, заказы, позиции со снапшотом цены, outbox" <<container>> as ordersDb 
+
+    rectangle "==Payment Service\n//<size:12>[Go]</size>//\n\n Расчёт сумм, платежи, возвраты, учёт транзакций" <<container>> as payments 
+    database "==Payment DB\n//<size:12>[PostgreSQL]</size>//\n\n Платежи, возвраты, журнал транзакций (append-only)" <<container>> as paymentsDb 
+
+    rectangle "==Notification Service\n//<size:12>[Go]</size>//\n\n Уведомления о статусах заказов по каналам" <<container>> as notify 
+    database "==Notification DB\n//<size:12>[PostgreSQL]</size>//\n\n Шаблоны, настройки каналов, проекция контактов, история" <<container>> as notifyDb 
+
+    queue "==Message Broker\n//<size:12>[Apache Kafka]</size>//\n\n Доменные события между сервисами" <<container>> as kafka 
+}
+
+buyer - ->> client : **Использует**\n//<size:12>[HTTPS]</size>//
+seller - ->> client : **Использует**\n//<size:12>[HTTPS]</size>//
+client - ->> gw : **API-запросы**\n//<size:12>[HTTPS / REST]</size>//
+
+gw - ->> users : **Логин, профиль**\n//<size:12>[REST, sync]</size>//
+gw - ->> catalog : **Каталог, CRUD товаров**\n//<size:12>[REST, sync]</size>//
+gw - ->> feed : **Лента, события просмотров**\n//<size:12>[REST, sync]</size>//
+gw - ->> orders : **Корзина, заказы**\n//<size:12>[REST, sync]</size>//
+
+orders - ->> catalog : **Цены и наличие на момент заказа**\n//<size:12>[gRPC, sync]</size>//
+payments - ->> psp : **Создание платежа / возврата**\n//<size:12>[HTTPS, sync]</size>//
+psp - ->> payments : **Статус платежа**\n//<size:12>[Webhook]</size>//
+notify - ->> msg : **Отправка**\n//<size:12>[HTTPS]</size>//
+
+users - ->> usersDb : **R/W**\n//<size:12>[SQL]</size>//
+catalog - ->> catalogDb : **R/W**\n//<size:12>[SQL]</size>//
+catalog - ->> media : **R/W**\n//<size:12>[S3 API]</size>//
+feed - ->> feedDb : **R/W**\n//<size:12>[RESP]</size>//
+orders - ->> ordersDb : **R/W**\n//<size:12>[SQL]</size>//
+payments - ->> paymentsDb : **R/W**\n//<size:12>[SQL]</size>//
+notify - ->> notifyDb : **R/W**\n//<size:12>[SQL]</size>//
+
+users - ->> kafka : **UserRegistered, UserUpdated**\n//<size:12>[async]</size>//
+catalog - ->> kafka : **ProductPublished, ProductUpdated, ProductRemoved**\n//<size:12>[async]</size>//
+feed - ->> kafka : **ProductViewed (активность)**\n//<size:12>[async]</size>//
+orders - ->> kafka : **OrderCreated, OrderCancelled, OrderStatusChanged**\n//<size:12>[async]</size>//
+payments - ->> kafka : **PaymentSucceeded, PaymentFailed, Refunded**\n//<size:12>[async]</size>//
+
+kafka - ->> feed : **Product*, OrderCreated, ProductViewed**\n//<size:12>[async]</size>//
+kafka - ->> orders : **Payment***\n//<size:12>[async]</size>//
+kafka - ->> payments : **OrderCreated, OrderCancelled**\n//<size:12>[async]</size>//
+kafka - ->> notify : **OrderStatusChanged, User***\n//<size:12>[async]</size>//
+
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 18:12:26 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,9 @@
+services:
+  catalog-service:
+    build: ./services/catalog-service
+    container_name: catalog-service
+    environment:
+      PORT: "8080"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

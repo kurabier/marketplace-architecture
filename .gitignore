@@ -1,0 +1,4 @@
+/services/*/catalog-service
+*.jar
+.idea/
+.vscode/
