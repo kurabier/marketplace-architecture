@@ -14,13 +14,6 @@
 ```bash
 docker compose up -d --build
 curl -i http://localhost:8080/health
-# HTTP/1.1 200 OK
-# Content-Type: application/json
-# {"status":"ok","service":"catalog-service"}
-
-docker compose ps          # STATUS: Up ... (healthy)
-docker compose down
-```
 
 Без Compose:
 
@@ -115,22 +108,7 @@ docker run --rm -p 8080:8080 catalog-service
 | `OrderStatusChanged` | Order | Notification | Уведомление покупателя |
 | `PaymentSucceeded`, `PaymentFailed`, `Refunded` | Payment | Order | Перевод заказа в следующий статус |
 
-Вне рамок системы (нет в требованиях кейса): логистика, склад, доставка, модерация.
-
-### Сценарий оформления заказа (сага, хореография)
-
-```
-Приложение покупателя ─► Gateway ─► Order ──gRPC──► Catalog (цена, наличие)
-                       │ сохраняет заказ PENDING_PAYMENT + событие в outbox (одна транзакция)
-                       ▼
-                 OrderCreated ──► Payment ──► провайдер ──webhook──► Payment
-                                                                       │
-                       ┌──────────── PaymentSucceeded / PaymentFailed ◄┘
-                       ▼
-                     Order: PAID / PAYMENT_FAILED ──► OrderStatusChanged ──► Notification ──► покупатель
-```
-
-Гарантии: события публикуются через **transactional outbox** (запись в БД и событие атомарны), консьюмеры **идемпотентны** (дедупликация по `event_id`), платёж создаётся с **idempotency key = order_id** — повторная доставка события не спишет деньги дважды.
+Вне рамок системы: логистика, склад, доставка.
 
 ---
 
