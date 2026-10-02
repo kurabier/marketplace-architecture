@@ -1,26 +1,15 @@
 # Маркетплейс — архитектурное проектирование
 
-ДЗ «C4 + инициализация сервисов». Спроектирована архитектура маркетплейса, описана C4 Container-диаграммой, один сервис (**Catalog Service**) поднят в Docker и отвечает `200 OK` на `/health`. Бизнес-логики в коде нет — по условию.
+ДЗ №1 Архитектурное проектирование системы маркетплейса. Спроектирована архитектура маркетплейса, описана C4 Container-диаграммой, один сервис (**Catalog Service**) поднят в Docker и отвечает `200 OK` на `/health`. Бизнес-логики в коде нет — по условию.
 
-```
-.
-├── README.md                     ← архитектура и решения (этот файл)
-├── docker-compose.yml
-├── docs/
-│   └── c4-container.png          ← C4 Container-диаграмма
-└── services/
-    └── catalog-service/          ← Go, только stdlib
-        ├── main.go
-        ├── main_test.go
-        ├── Dockerfile
-        └── go.mod
-```
+## 1. C4 Container-диаграмма
 
----
+![C4 Container](docs/c4-container.png)
+
 
 ## Быстрый старт
 
-Нужен Docker с Compose v2.
+Для Docker с Compose v2.
 
 ```bash
 docker compose up -d --build
@@ -39,20 +28,6 @@ docker compose down
 docker build -t catalog-service ./services/catalog-service
 docker run --rm -p 8080:8080 catalog-service
 ```
-
-Локально без Docker (Go 1.22+): `cd services/catalog-service && go test ./... && go run .`
-
-**Детали сервиса.** Multi-stage сборка: статический бинарник (`CGO_ENABLED=0`) в образе `distroless/static` под non-root пользователем. В distroless нет `curl`, поэтому для `HEALTHCHECK` бинарник умеет проверить сам себя (`/catalog-service -healthcheck`). Порт задаётся переменной `PORT` (по умолчанию 8080). Обрабатывается `SIGTERM` — graceful shutdown, чтобы `docker stop` не обрывал запросы.
-
----
-
-## 1. C4 Container-диаграмма
-
-![C4 Container](docs/c4-container.png)
-
-На стрелках указан протокол и тип взаимодействия: `sync` — синхронный запрос с ожиданием ответа, `async` — событие через Kafka.
-
----
 
 ## 2. Домены и зоны ответственности
 
